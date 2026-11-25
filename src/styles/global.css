@@ -1,0 +1,88 @@
+:root {
+  --bg: #fbfaf7;
+  --text: #1d1d1b;
+  --muted: #6b6a66;
+  --rule: #e4e1da;
+  --accent: #b4462b;
+  --code-bg: #f1eee7;
+  --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161614;
+    --text: #e8e6e1;
+    --muted: #9a9892;
+    --rule: #2e2d2a;
+    --accent: #e0825f;
+    --code-bg: #22211e;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg); color: var(--text); }
+
+body {
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 3rem 1.25rem 5rem;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-underline-offset: 0.18em; }
+
+header.site {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  margin-bottom: 3.5rem;
+}
+header.site .name { color: var(--text); font-weight: 600; text-decoration: none; }
+header.site nav a { color: var(--muted); text-decoration: none; margin-left: 1.25rem; }
+header.site nav a:hover { color: var(--accent); }
+
+h1, h2, h3 { line-height: 1.25; font-weight: 600; }
+h1 { font-size: 2.1rem; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+h2 { font-size: 1.4rem; margin-top: 2.5rem; }
+h3 { font-size: 1.15rem; margin-top: 2rem; }
+
+.meta { font-family: var(--sans); font-size: 0.85rem; color: var(--muted); }
+
+.intro { color: var(--muted); margin-bottom: 3rem; }
+
+ul.posts { list-style: none; padding: 0; margin: 0; }
+ul.posts li { padding: 1.1rem 0; border-top: 1px solid var(--rule); }
+ul.posts li:last-child { border-bottom: 1px solid var(--rule); }
+ul.posts a { color: var(--text); text-decoration: none; font-size: 1.2rem; font-weight: 600; }
+ul.posts a:hover { color: var(--accent); }
+ul.posts p { margin: 0.25rem 0 0; color: var(--muted); font-size: 1rem; }
+
+article header { margin-bottom: 2.5rem; }
+
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.1rem;
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+}
+
+code { font-family: var(--mono); font-size: 0.88em; background: var(--code-bg); padding: 0.1em 0.3em; border-radius: 4px; }
+pre { padding: 1rem; border-radius: 6px; overflow-x: auto; font-size: 0.9rem; line-height: 1.5; }
+pre code { background: none; padding: 0; }
+
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+footer.site {
+  margin-top: 5rem;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
